@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">VIFILMES</string>
     <string name="refresh">Actualizar</string>
+    <string name="title_activity_inicial_">Tela Inicial</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_creat_account">Creat Account</string>
 </resources>
