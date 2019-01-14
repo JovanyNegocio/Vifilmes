@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "855168377798",
+    "firebase_url": "https://vifilmes-b4318.firebaseio.com",
+    "project_id": "vifilmes-b4318",
+    "storage_bucket": "vifilmes-b4318.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855168377798:android:71fce68ba4c161a4",
+        "android_client_info": {
+          "package_name": "com.jovavanguiagamil.mooviz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855168377798-t10sh9dfrmtvs6orrj6obsbc8e9v756n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jovavanguiagamil.mooviz",
+            "certificate_hash": "ce590d392cc952da4bbf4aad9ff123df123850b9"
+          }
+        },
+        {
+          "client_id": "855168377798-mg6d71t9us1s4i7d4nl1j45es7pvjtkl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnGx3u5gMYrMkD-WIXOL_DR26kiXnrrxk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855168377798-mg6d71t9us1s4i7d4nl1j45es7pvjtkl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
