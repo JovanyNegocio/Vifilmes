@@ -2,12 +2,15 @@ package com.jovavanguiagamil.mooviz;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.jovavanguiagamil.mooviz.api.TmdbApi;
@@ -20,18 +23,21 @@ import java.util.ArrayList;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 import static com.jovavanguiagamil.mooviz.R.id.textview_movies;
 
 public class MainActivity extends AppCompatActivity {
     private TmdbApi api;
     private TextView moviesTextView;
     private ProgressBar loadingProgressBar;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Lista de Filmes");
 
         moviesTextView = findViewById(textview_movies);
         loadingProgressBar = findViewById(R.id.progressbar_loading);

@@ -26,10 +26,8 @@
             android:layout_gravity="center"
             android:background="@drawable/fundo_caixa_button"
             android:textColor="#FFFFFF"
-            android:onClick="tela_inicial"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="INICIAR"
-            tools:ignore="OnClick" />
+            android:text="INICIAR" />
 
 
 </LinearLayout>
