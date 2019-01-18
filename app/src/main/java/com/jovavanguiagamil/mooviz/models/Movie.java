@@ -6,7 +6,7 @@ public class Movie {
     private String title;
     @SerializedName("poster_path")
     private String posterPath;
-    @SerializedName("backdrop_Path")
+    @SerializedName("backdrop_path")
     private String backdropPath;
     @SerializedName("release_date")
     private String releaseDate;

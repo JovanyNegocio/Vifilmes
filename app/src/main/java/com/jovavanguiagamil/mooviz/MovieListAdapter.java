@@ -39,7 +39,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.Movi
     public void onBindViewHolder(@NonNull MovieViewHolder holder, final int position) {
         final Movie film = filmList.get(position);
         holder.filmeTitle.setText(film.getTitle());
-        Picasso.get().load(film.getBackdropPath()).into(holder.filmImage);
+        Picasso.get().load("https://image.tmdb.org/t/p/w500" + film.getPostpath()).into(holder.filmImage);
     }
 
     @Override
