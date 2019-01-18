@@ -11,6 +11,15 @@
     android:background="@drawable/bgtela"
     android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
     <ImageView
         android:layout_width="300dp"
         android:layout_height="90dp"
@@ -30,9 +39,12 @@
         android:gravity="center"/>
     
     <EditText
+        android:drawableLeft="@drawable/ic_person2"
+        android:drawablePadding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="NOME USUÁRIO"
+        android:textSize="15dp"
         android:padding="16dp"
         android:textColor="@android:color/white"
         android:textColorHint="#22FFFFFF"
@@ -41,9 +53,12 @@
         android:id="@+id/username"/>
 
     <EditText
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="EMAIL USUÁRIO"
+        android:textSize="15dp"
         android:padding="16dp"
         android:textColor="@android:color/white"
         android:textColorHint="#22FFFFFF"
@@ -52,9 +67,13 @@
         android:id="@+id/email"/>
 
     <EditText
+        android:drawableLeft="@drawable/ic_key"
+        android:drawablePadding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="SENHA USUÁRIO"
+        android:textSize="15dp"
+        android:inputType="textPassword"
         android:layout_marginTop="20dp"
         android:padding="16dp"
         android:textColor="@android:color/white"
@@ -80,5 +99,8 @@
         android:gravity="center"
         android:layout_marginTop="20dp"
         android:id="@+id/txt_login"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

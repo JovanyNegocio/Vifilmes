@@ -7,21 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/films_recyclerview_id"
+        tools:listitem="@layout/card_item_filmes">
+
+    </android.support.v7.widget.RecyclerView>
 
     <include layout="@layout/toolbar"
         android:id="@+id/toolbar"/>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/textview_movies"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"/>
-
-    </ScrollView>
 
     <ProgressBar
         android:id="@+id/progressbar_loading"

@@ -1,7 +1,9 @@
 package com.jovavanguiagamil.mooviz.models;
-import com.google.gson.annotations.SerializedName;
 
+
+import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
+
 
 public class Page {
     private int page;
@@ -11,12 +13,14 @@ public class Page {
     private int totalPages;
     private ArrayList<Movie> results;
 
+
     public Page(int page, int totalResults, int totalPages, ArrayList<Movie> results) {
         this.page = page;
         this.totalResults = totalResults;
         this.totalPages = totalPages;
         this.results = results;
     }
+
 
     public int getPage() {
         return page;

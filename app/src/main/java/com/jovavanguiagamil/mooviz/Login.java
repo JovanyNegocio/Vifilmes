@@ -30,6 +30,7 @@ public class Login extends AppCompatActivity {
     private EditText email, password;
     private Button login;
     private TextView txt_signup;
+    private TextView criarconta;
 
     FirebaseAuth auth;
 
@@ -39,6 +40,8 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        criarconta = findViewById(R.id.criarconta);
 
 
         auth = FirebaseAuth.getInstance();
@@ -54,6 +57,14 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Login.this, CreatAccount.class));
                 finish();
+            }
+        });
+
+        criarconta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent criarconta = new Intent(Login.this, CreatAccount.class);
+                startActivity(criarconta);
             }
         });
 
@@ -80,8 +91,12 @@ public class Login extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()){
-                                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Users")
-                                                .child(auth.getCurrentUser().getUid());
+                                        Intent logado = new Intent(Login.this, MainActivity.class);
+                                        logado.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        startActivity(logado);
+                                        finish();
+                                      /**  DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Users")
+                                        .child(auth.getCurrentUser().getUid());
 
                                         reference.addValueEventListener(new ValueEventListener() {
                                             @Override
@@ -97,7 +112,8 @@ public class Login extends AppCompatActivity {
                                             public void onCancelled(@NonNull DatabaseError databaseError) {
                                                 pd.dismiss();
                                             }
-                                        });
+                                        }); */
+
                                     }else{
                                         pd.dismiss();
                                         Toast.makeText(Login.this, "Authentication failed", Toast.LENGTH_SHORT).show();
